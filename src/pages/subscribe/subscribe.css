@@ -1,0 +1,44 @@
+@media screen and (min-width: 846px) {
+  .subscribeDiv {
+    display: grid;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    max-height: fit-content;
+    margin-top: 1rem;
+  }
+
+  .subscribe {
+    /* z-index: -2; */
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border: var(--border);
+    height: 9rem;
+    border-radius: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .subscribeButton {
+    align-self: flex-start;
+  }
+
+  .subscribe h3 {
+    font-size: 0.9em;
+  }
+
+  .subscribe p {
+    font-size: 0.6em;
+  }
+  .trend {
+    height: 100vh;
+  }
+
+  .posting {
+    font-size: 0.6em;
+    background: rgb(180, 130, 226);
+    border-radius: 2em;
+    border: none;
+    padding: 0.4em 1em;
+  }
+}

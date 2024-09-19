@@ -1,0 +1,293 @@
+/* 
+===============================
+form
+==============================
+*/
+
+.messagePage {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.message {
+  display: none;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background: black;
+  z-index: 3;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.showMessge {
+  display: grid;
+}
+
+.myMessage {
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 12px;
+  height: auto;
+  resize: none;
+}
+
+.myMessage::-webkit-scrollbar {
+  display: none;
+}
+
+.myMessage:focus {
+  outline: none;
+}
+.formInput {
+  background: none;
+  border: none;
+  width: 90%;
+  font-size: 12px;
+  height: auto;
+  resize: none;
+  margin-top: 1rem;
+}
+
+.formInput::-webkit-scrollbar {
+  display: none;
+}
+
+.formInput:focus {
+  outline: none;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: var(--border);
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.line p {
+  color: rgb(182, 143, 218);
+  font-size: 12px;
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.log {
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgb(167, 113, 218);
+  border-radius: 1rem;
+  border: none;
+}
+
+.profileImage {
+  background: rgb(135, 123, 123);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.imageText {
+  font-size: 6px;
+  color: rgb(178, 139, 139);
+}
+/*
+====================================
+displayMessage
+===================================
+*/
+
+.displayMessage {
+  border: var(--border);
+  border-top: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+.displayMessage1 {
+  border-right: var(--border);
+  border-left: var(--border);
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.displayPostMessages {
+  font-size: 14px;
+  margin-top: 0.5rem;
+}
+.displayButton .personInfor {
+  /* display: none; */
+  background: rgb(198, 21, 21);
+  font-size: 0.7rem;
+  width: auto;
+  padding: 0 3px;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  position: absolute;
+  left: 21rem;
+  top: 1.5rem;
+}
+
+.personEmail {
+  font-size: 0.55rem;
+}
+
+.displayImage {
+  object-fit: cover;
+}
+.displayImage,
+.displayMessage2 {
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1rem;
+}
+
+.postFunctionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.displayButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.displayButton p {
+  color: var(--color100);
+  font-size: 11px;
+}
+.displayIcon {
+  fill: var(--color100);
+  color: var(--color100);
+}
+
+.displayIconCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+}
+.displayIconCon:hover {
+  border-radius: 50%;
+  background: rgba(121, 121, 166, 0.3);
+}
+.postProfile {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 13px;
+  align-items: flex-start;
+}
+
+.messageLine {
+  align-self: center;
+  border-bottom: var(--border);
+  width: 100%;
+}
+
+.postin {
+  background: rgb(180, 130, 226);
+  width: 4rem;
+  margin-top: -2.5rem;
+  align-self: flex-end;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+}
+
+/* .file-input-wrapper {
+    display: inline-block;
+} */
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  /* padding: 10px 10px; */
+  margin-top: 2rem;
+  width: 0;
+  height: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.galleryIcon {
+  fill: var(--color100);
+  font-size: 1.5rem;
+}
+
+/* 
+================================
+MEDIA QUERY AT 505PX
+================================
+*/
+@media screen and (min-width: 478px) {
+  .message {
+    height: 11rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    position: inherit;
+    padding: 1rem;
+    justify-content: center;
+    border: var(--border);
+    border-top: none;
+    z-index: 0;
+  }
+
+  .formInput {
+    width: 100%;
+  }
+}
+
+/* 
+================================
+MEDIA QUERY AT 846PX
+================================
+*/
+@media screen and (min-width: 846px) {
+  .messagePage {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}
+
+/* 
+================================
+MEDIA QUERY FOR LAPTOP VIEW
+================================
+*/
+@media screen and (min-width: 1200px) {
+  .messagePage {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}

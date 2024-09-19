@@ -1,0 +1,181 @@
+.homeNav {
+  z-index: 1;
+  position: static;
+  top: 0;
+  left: 0;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--border);
+}
+
+.phoneForm input,
+.phoneForm button {
+  color: black;
+  height: 2rem;
+  outline: none;
+  border: none;
+  margin-left: 0.5rem;
+}
+.homeNavLink {
+  background: black;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  border-bottom: var(--border);
+  border: none;
+  height: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.homeLink {
+  color: white;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  column-gap: 1rem;
+  transition: all 0.5s;
+  border-radius: 2rem;
+  width: 9rem;
+}
+
+.topSection1 {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+}
+
+.fontSearch {
+  display: none;
+}
+
+.activeHomeLink {
+  text-decoration: underline;
+  text-decoration-color: blueviolet;
+  text-decoration-line: var(--border);
+}
+
+.noShow {
+  display: none;
+}
+
+/* 
+========================================================
+MEDIA QUERY AT 505PX
+========================================================
+*/
+@media screen and (min-width: 478px) {
+  .homeNavLink {
+    background: black;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    border: var(--border);
+    border-top: none;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .topSection1 {
+    display: none;
+  }
+}
+
+/* 
+================================
+MEDIA QUERY AT 846PX
+================================
+*/
+@media screen and (min-width: 846px) {
+  .homeNav {
+    z-index: 1;
+    position: sticky;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 1.5rem;
+    top: 0;
+    border: none;
+  }
+
+  .homeNavLink {
+    background: black;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    border: var(--border);
+    border-top: none;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .homeLink {
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    column-gap: 1rem;
+    transition: all 0.5s;
+    border-radius: 2rem;
+    width: 9rem;
+  }
+
+  .activeHomeLink {
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+    text-decoration-line: var(--border);
+  }
+
+  .fontSearch {
+    margin-top: 0.6rem;
+    display: flex;
+    height: 80%;
+    position: relative;
+  }
+
+  .searchForm {
+    background: black;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+  }
+
+  .search {
+    position: sticky;
+    top: 0;
+    width: 95%;
+    height: 80%;
+    border-radius: 3rem;
+    background: rgb(40, 40, 40);
+    border: none;
+    text-align: center;
+  }
+
+  .move {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+  }
+
+  .noShow {
+    display: block;
+  }
+}
